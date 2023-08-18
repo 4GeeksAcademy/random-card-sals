@@ -1,11 +1,11 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+const valores = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+const valorAleatorio = Math.floor(Math.random() * valores.length);
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const carta = document.querySelector(".carta");
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+carta.innerHTML = valores [valorAleatorio];
+
+const pintas = ["diamante", "corazon", "pica", "trebol"];
+const pintaAleatoria = Math.floor(Math.random() * pintas.length);
+
+carta.classList.add(pintas[pintaAleatoria]);

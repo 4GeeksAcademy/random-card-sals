@@ -1,1 +1,49 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+  background-color: rgb(22, 91, 22);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carta{
+  width: 250px;
+  height: 320px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+}
+
+.carta::before{
+  align-self: flex-start;
+}
+
+.carta::after{
+  transform: rotate(180deg);
+  align-self: flex-end;
+}
+
+.carta.trebol::before, .carta.trebol::after{
+  content: "♣";
+}
+
+.carta.pica::before, .carta.pica::after{
+  content: "♠";
+}
+
+.carta.diamante::before, .carta.diamante::after{
+  content: "♦";
+}
+
+.carta.corazon::before, .carta.corazon::after{
+  content: "♥";
+}
+
+.carta.corazon, .carta.diamante{
+  color: red;
+}
